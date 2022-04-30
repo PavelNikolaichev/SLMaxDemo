@@ -32,14 +32,14 @@ Class Person
      * If `id` is already exists in db all data will be fetched from this row then.
      * Otherwise, a new row will be created.
      * @param int $id - id of the player, may be used to fetch data from db.
-     * @param string $name - name of the player.
-     * @param string $surname - surname of the player.
-     * @param string $birth_date - date of birth of the player.
-     * @param int $gender - gender of the player.
-     * @param string $city_of_birth - city of birth of the player.
+     * @param string|null $name - name of the player.
+     * @param string|null $surname - surname of the player.
+     * @param string|null $birth_date - date of birth of the player.
+     * @param int|null $gender - gender of the player.
+     * @param string|null $city_of_birth - city of birth of the player.
      */
-    public function __construct(int $id, string $name, string $surname,
-        string $birth_date, int $gender, string $city_of_birth
+    public function __construct(int $id, string $name = null, string $surname = null,
+        string $birth_date = null, int $gender = null, string $city_of_birth = null
     ) {
         $pdo = DataBase::getConnection();
 
